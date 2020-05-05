@@ -1,4 +1,4 @@
 ## Netscape-bookmark importer for qutebrowser
 
-### If bookmark has name, then bookmark will be write into quckmakrs (name link)
-### Else bookmark will be write into urls
+### If the bookmark has a name, then the bookmark will be written to quckmakrs (name link)
+### Else the bookmark will be written to urls
