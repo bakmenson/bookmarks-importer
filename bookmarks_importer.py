@@ -1,4 +1,5 @@
 from html.parser import HTMLParser
+from sys import argv, exit
 
 
 class BookmarksParser(HTMLParser):
@@ -24,9 +25,21 @@ class BookmarksParser(HTMLParser):
 
 
 parser = BookmarksParser()
+origin_bookmarks = ""
 
-with open("bookmarks.html", "r", encoding="utf-8") as f:
-    parser.feed(f.read())
+try:
+    origin_bookmarks = argv[1]
+except IndexError:
+    print("Missed path to bookmarks.html")
+    exit()
+
+try:
+    with open(origin_bookmarks, "r", encoding="utf-8") as f:
+        parser.feed(f.read())
+except FileNotFoundError:
+    print(f"\nNo such file: '{origin_bookmarks}'"
+          f"\nPlease input correct path to bookmarks.html.")
+    exit()
 
 bookmarks_lst = list(
     filter(
