@@ -23,7 +23,6 @@ class BookmarksParser(HTMLParser):
         self.tag_data = []
 
 
-
 parser = BookmarksParser()
 origin_bookmarks = ""
 
