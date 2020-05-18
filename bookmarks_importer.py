@@ -96,7 +96,6 @@ while True:
         break
 
     continue
-exit()
 
 urls_path = "urls" if destination_choice == 1 else "urls"
 quickmarks_path = "quickmarks" if destination_choice == 1 else "quickmarks"
