@@ -85,7 +85,7 @@ destination_choice = None
 while True:
     print("1) Save urls and quickmarks here.\n2) Overwrite urls and"
           " quickmarks in ~/.config/qutebrowser,\n   be carefull if"
-          " command == '-w' you can lost current urls and quickmarks.")
+          " command == '-w' you can lost current urls and quickmarks values.")
 
     try:
         destination_choice = int(input("\n>>> "))
@@ -94,6 +94,7 @@ while True:
 
     if 0 < destination_choice < 3:
         break
+
     continue
 exit()
 
