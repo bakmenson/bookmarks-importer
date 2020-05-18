@@ -48,10 +48,11 @@ except ValueError:
     print("Wrong command.")
     exit()
 
-try:
-    argv_bookmarks = argv[2] if not argv[2].startswith("-") else None
-except IndexError:
-    pass
+if len(argv) == 3:
+    try:
+        argv_bookmarks = argv[2] if not argv[2].startswith("-") else None
+    except IndexError:
+        pass
 
 bookmarks = argv_bookmarks if argv_bookmarks else "bookmarks.html"
 
