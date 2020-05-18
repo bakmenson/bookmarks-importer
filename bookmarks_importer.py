@@ -33,21 +33,21 @@ def write_bookmarks(file_path, mode, string):
 
 def print_help():
     print(
-        """
-        Usage: python3 bookmarks_importer.py <command> [<arg>]
+    """
+    Usage: python3 bookmarks_importer.py <command> [<arg>]
 
-        commands:
-            -w    open for writing, truncating the file first
-            -a    open for writing, appending to the end of the file if it exists
-            -h    print help
+    commands:
+        -w        open for writing, truncating the file first
+        -a        open for writing, appending to the end of the file if it exists
+        --help    print help
 
-            default command '-w' if no command
+        default command '-w' if no command
 
-        arg:
-            /path/to/bookmarks.html
+    arg:
+        /path/to/bookmarks.html
 
-            if no arg then script will looks for bookmarks.html in script dir
-        """
+        if no arg then script will looks for bookmarks.html in script dir
+    """
     )
 
 
@@ -59,7 +59,7 @@ open_mode = str()
 if len(argv) >= 2:
     try:
         argv_command = argv[1] if argv[1].startswith("-") else None
-        if argv_command and argv_command not in {"-w", "-a"}:
+        if argv_command and argv_command not in {"-w", "-a", "--help"}:
             raise ValueError
 
         argv_bookmarks = argv[1] if not argv[1].startswith("-") else None
