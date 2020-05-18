@@ -5,7 +5,7 @@
 
 
 ### How to use
-#### $ python3 bookmarks_importer.py [command] [arg]
+* $ python3 bookmarks_importer.py [command] [arg]
   
 #### commands:
     -w        open for writing, truncating the file first
