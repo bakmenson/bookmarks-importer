@@ -1,5 +1,7 @@
 from html.parser import HTMLParser
 from sys import argv, exit
+from os import getcwd
+from pathlib import Path
 
 
 class BookmarksParser(HTMLParser):
@@ -97,8 +99,13 @@ while True:
 
     continue
 
-urls_path = "urls" if destination_choice == 1 else "urls"
-quickmarks_path = "quickmarks" if destination_choice == 1 else "quickmarks"
+home_dir = str(Path.home())
+
+urls_path = getcwd() + "/urls" if destination_choice == 1 \
+    else home_dir + "/.config/qutebrowser/bookmarks/urls"
+
+quickmarks_path = getcwd() + "/quickmarks" if destination_choice == 1 \
+    else home_dir + "/.config/qutebrowser/quickmarks"
 
 try:
     open_mode = "a" if argv_command.replace("-", "") == "a" else "w"
