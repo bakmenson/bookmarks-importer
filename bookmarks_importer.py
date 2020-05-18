@@ -74,6 +74,10 @@ if len_argv >= 2:
         print_help()
         exit()
 
+if argv_command == "--help":
+    print_help()
+    exit()
+
 if len_argv == 3:
     try:
         argv_bookmarks = argv[2] if not argv[2].startswith("-") else None
