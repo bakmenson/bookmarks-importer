@@ -35,7 +35,7 @@ def write_bookmarks(file_path, mode, string):
 
 def print_help():
     print(
-    """
+        """
     Usage: python3 bookmarks_importer.py <command> [<arg>]
 
     commands:
