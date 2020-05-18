@@ -90,7 +90,7 @@ destination_choice = None
 
 while True:
     print("1) Save urls and quickmarks here.\n2) Overwrite urls and"
-          " quickmarks in ~/.config/qutebrowser,\n   be carefull if"
+          " quickmarks in ~/.config/qutebrowser,\n   be careful if"
           " command == '-w' you can lost current urls and quickmarks values.")
 
     try:
