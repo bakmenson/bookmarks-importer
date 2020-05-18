@@ -23,7 +23,7 @@ class BookmarksParser(HTMLParser):
         self.tag_data = []
 
 
-def write_file(file_path, mode, string):
+def write_bookmarks(file_path, mode, string):
     with open(file_path, mode, encoding="utf-8") as f:
         if mode == "a":
             f.write("\n" + string)
@@ -78,10 +78,10 @@ if (urls_list := list(filter(lambda x: len(x) == 1, bookmarks_lst))):
 
     urls_str = "\n".join([link for sublist in urls_list for link in sublist])
 
-    write_file(urls_path, open_mode, urls_str)
+    write_bookmarks(urls_path, open_mode, urls_str)
 
 if (qk_list := list(filter(lambda x: len(x) == 2, bookmarks_lst))):
 
     qk_str = "\n".join([" ".join(item) for item in qk_list])
 
-    write_file(quickmarks_path, open_mode, qk_str)
+    write_bookmarks(quickmarks_path, open_mode, qk_str)
