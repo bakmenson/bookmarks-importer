@@ -84,7 +84,7 @@ urls_path = "urls" if not argv_command else "urls"
 quickmarks_path = "quickmarks" if not argv_command else "quickmarks"
 
 try:
-    open_mode = "a" if "a" == argv_command.replace("-", "") else "w"
+    open_mode = "a" if argv_command.replace("-", "") == "a" else "w"
 except AttributeError:
     open_mode = "w"
 
