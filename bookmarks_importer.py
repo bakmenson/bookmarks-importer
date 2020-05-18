@@ -67,6 +67,7 @@ if len(argv) >= 2:
         pass
     except ValueError:
         print("Wrong command.")
+        print_help()
         exit()
 
 if len(argv) == 3:
