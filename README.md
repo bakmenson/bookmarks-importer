@@ -4,8 +4,8 @@
 ### Else the bookmark will be written to urls
 
 
-## How to use
-#### $ python3 bookmarks_importer.py [command] [path]
+### How to use
+#### $ python3 bookmarks_importer.py [command] [arg]
   
 #### commands:
     -w        open for writing, truncating the file first
