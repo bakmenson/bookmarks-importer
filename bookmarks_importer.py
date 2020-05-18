@@ -36,17 +36,18 @@ argv_bookmarks = None
 argv_command = None
 open_mode = str()
 
-try:
-    argv_command = argv[1] if argv[1].startswith("-") else None
-    if argv_command and argv_command not in {"-w", "-a"}:
-        raise ValueError
+if len(argv) >= 2:
+    try:
+        argv_command = argv[1] if argv[1].startswith("-") else None
+        if argv_command and argv_command not in {"-w", "-a"}:
+            raise ValueError
 
-    argv_bookmarks = argv[1] if not argv[1].startswith("-") else None
-except IndexError:
-    pass
-except ValueError:
-    print("Wrong command.")
-    exit()
+        argv_bookmarks = argv[1] if not argv[1].startswith("-") else None
+    except IndexError:
+        pass
+    except ValueError:
+        print("Wrong command.")
+        exit()
 
 if len(argv) == 3:
     try:
