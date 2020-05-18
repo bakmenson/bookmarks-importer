@@ -80,8 +80,19 @@ if len_argv == 3:
 
 bookmarks = argv_bookmarks if argv_bookmarks else "bookmarks.html"
 
-urls_path = "urls" if not argv_command else "urls"
-quickmarks_path = "quickmarks" if not argv_command else "quickmarks"
+destination_choice = None
+
+while True:
+    print("1) Save urls and quickmarks here\n2) Overwrite urls and"
+          " quickmarks in ~/.config/qutebrowser")
+
+    if 0 < (destination_choice := int(input(">>> "))) < 3:
+        break
+    continue
+exit()
+
+urls_path = "urls" if destination_choice == 1 else "urls"
+quickmarks_path = "quickmarks" if destination_choice == 1 else "quickmarks"
 
 try:
     open_mode = "a" if argv_command.replace("-", "") == "a" else "w"
