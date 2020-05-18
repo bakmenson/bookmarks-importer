@@ -5,9 +5,11 @@
 
 
 ### How to use
-* $ git clone https://github.com/bakmenson/bookmarks-importer.git
-* $ cd bookmarks-importer
-* $ python3 bookmarks_importer.py [command] [arg]
+```bash
+git clone https://github.com/bakmenson/bookmarks-importer.git
+cd bookmarks-importer
+python3 bookmarks_importer.py [command] [arg]
+```
   
 #### commands:
     -w        open for writing, truncating the file first
