@@ -56,7 +56,9 @@ argv_bookmarks = None
 argv_command = None
 open_mode = str()
 
-if len(argv) >= 2:
+len_argv = len(argv)
+
+if len_argv >= 2:
     try:
         argv_command = argv[1] if argv[1].startswith("-") else None
         if argv_command and argv_command not in {"-w", "-a", "--help"}:
@@ -70,7 +72,7 @@ if len(argv) >= 2:
         print_help()
         exit()
 
-if len(argv) == 3:
+if len_argv == 3:
     try:
         argv_bookmarks = argv[2] if not argv[2].startswith("-") else None
     except IndexError:
