@@ -38,9 +38,15 @@ open_mode = str()
 
 try:
     argv_command = argv[1] if argv[1].startswith("-") else None
+    if argv_command and argv_command not in {"-w", "-a"}:
+        raise ValueError
+
     argv_bookmarks = argv[1] if not argv[1].startswith("-") else None
 except IndexError:
     pass
+except ValueError:
+    print("Wrong command.")
+    exit()
 
 try:
     argv_bookmarks = argv[2] if not argv[2].startswith("-") else None
@@ -56,9 +62,6 @@ try:
     open_mode = "a" if "a" == argv_command.replace("-", "") else "w"
 except AttributeError:
     open_mode = "w"
-
-print(open_mode)
-# exit()
 
 try:
     with open(bookmarks, "r", encoding="utf-8") as f:
