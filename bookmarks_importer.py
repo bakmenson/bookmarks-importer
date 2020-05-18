@@ -83,8 +83,9 @@ bookmarks = argv_bookmarks if argv_bookmarks else "bookmarks.html"
 destination_choice = None
 
 while True:
-    print("1) Save urls and quickmarks here\n2) Overwrite urls and"
-          " quickmarks in ~/.config/qutebrowser")
+    print("1) Save urls and quickmarks here.\n2) Overwrite urls and"
+          " quickmarks in ~/.config/qutebrowser,\n    be carefull if"
+          " command == '-w' you can lost current urls and quickmarks.")
 
     if 0 < (destination_choice := int(input(">>> "))) < 3:
         break
