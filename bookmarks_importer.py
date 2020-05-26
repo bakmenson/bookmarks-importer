@@ -61,18 +61,16 @@ open_mode = str()
 len_argv = len(argv)
 
 if len_argv >= 2:
-    try:
-        argv_command = argv[1] if argv[1].startswith("-") else None
-        if argv_command and argv_command not in {"-w", "-a", "--help"}:
-            raise ValueError
 
-        argv_bookmarks = argv[1] if not argv[1].startswith("-") else None
-    except IndexError:
-        pass
-    except ValueError:
-        print("Wrong command.")
-        print_help()
-        exit()
+    if argv[1].startswith("-"):
+        argv_command = argv[1]
+
+        if argv_command not in {"-w", "-a", "--help"}:
+            print("Wrong command.")
+            print_help()
+            exit()
+
+    argv_bookmarks = argv[1]
 
 if argv_command == "--help":
     print_help()
