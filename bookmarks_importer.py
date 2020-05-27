@@ -74,7 +74,7 @@ if argv_command == "--help":
 
 bookmarks = argv_bookmarks if argv_bookmarks else "bookmarks.html"
 
-open_mode = "a" if argv_command.replace("-", "") == "a" else "w"
+open_mode = "a" if argv_command == "-a" else "w"
 
 destination_choice = None
 
