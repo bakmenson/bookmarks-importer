@@ -54,9 +54,9 @@ def print_help():
 
 
 parser = BookmarksParser()
-argv_bookmarks = None
-argv_command = None
-open_mode = str()
+argv_bookmarks = ""
+argv_command = ""
+open_mode = ""
 
 len_argv = len(argv)
 
