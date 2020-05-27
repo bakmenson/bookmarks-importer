@@ -68,6 +68,10 @@ if len(argv) > 1:
         if not argv[i].startswith("-"):
             argv_bookmarks = argv[i]
 
+if argv_command == "--help":
+    print_help()
+    exit()
+
 bookmarks = argv_bookmarks if argv_bookmarks else "bookmarks.html"
 
 destination_choice = None
