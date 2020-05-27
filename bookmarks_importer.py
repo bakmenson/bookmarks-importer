@@ -60,27 +60,13 @@ open_mode = str()
 
 len_argv = len(argv)
 
-if len_argv >= 2:
+if len(argv) > 1:
+    for i in range(1, len(argv)):
+        if argv[i].startswith("-"):
+            argv_command = argv[i].replace("-", "")
 
-    if argv[1].startswith("-"):
-        argv_command = argv[1]
-
-        if argv_command not in {"-w", "-a", "--help"}:
-            print("Wrong command.")
-            print_help()
-            exit()
-
-    argv_bookmarks = argv[1]
-
-if argv_command == "--help":
-    print_help()
-    exit()
-
-if len_argv == 3:
-    try:
-        argv_bookmarks = argv[2] if not argv[2].startswith("-") else None
-    except IndexError:
-        pass
+        if not argv[i].startswith("-"):
+            argv_bookmarks = argv[i]
 
 bookmarks = argv_bookmarks if argv_bookmarks else "bookmarks.html"
 
