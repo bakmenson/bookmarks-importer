@@ -6,9 +6,9 @@
 
 ### How to use
 ```bash
-git clone https://github.com/bakmenson/bookmarks-importer.git
-cd bookmarks-importer
-python3 bookmarks_importer.py <command> <arg>
+$ git clone https://github.com/bakmenson/bookmarks-importer.git
+$ cd bookmarks-importer
+$ python3 bookmarks_importer.py <command> <arg>
 ```
   
 #### commands:
