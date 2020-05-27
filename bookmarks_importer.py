@@ -95,10 +95,7 @@ urls_path = getcwd() + "/urls" if destination_choice == 1 \
 quickmarks_path = getcwd() + "/quickmarks" if destination_choice == 1 \
     else home_dir + "/.config/qutebrowser/quickmarks"
 
-try:
-    open_mode = "a" if argv_command.replace("-", "") == "a" else "w"
-except AttributeError:
-    open_mode = "w"
+open_mode = "a" if argv_command.replace("-", "") == "a" else "w"
 
 try:
     with open(bookmarks, "r", encoding="utf-8") as f:
