@@ -63,7 +63,7 @@ len_argv = len(argv)
 if len(argv) > 1:
     for i in range(1, len(argv)):
         if argv[i].startswith("-"):
-            argv_command = argv[i]
+            argv_command = argv[i].replace("-", "")
 
         if not argv[i].startswith("-"):
             argv_bookmarks = argv[i]
