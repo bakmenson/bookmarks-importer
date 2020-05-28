@@ -118,8 +118,8 @@ if (urls_list := list(filter(lambda x: len(x) == 1, bookmarks_lst))):
 
     write_bookmarks(urls_path, open_mode, urls_str)
 
-if (qk_list := list(filter(lambda x: len(x) == 2, bookmarks_lst))):
+if (quickmarks_list := list(filter(lambda x: len(x) == 2, bookmarks_lst))):
 
-    qk_str = "\n".join([" ".join(item) for item in qk_list])
+    quickmarks_str = "\n".join([" ".join(item) for item in quickmarks_list])
 
-    write_bookmarks(quickmarks_path, open_mode, qk_str)
+    write_bookmarks(quickmarks_path, open_mode, quickmarks_str)
