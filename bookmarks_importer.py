@@ -114,7 +114,7 @@ bookmarks_lst = list(
 
 if (urls_list := list(filter(lambda x: len(x) == 1, bookmarks_lst))):
 
-    urls_str = "\n".join([link for sublist in urls_list for link in sublist])
+    urls_str = "\n".join([url for sublist in urls_list for url in sublist])
 
     write_bookmarks(urls_path, open_mode, urls_str)
 
