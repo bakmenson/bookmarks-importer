@@ -57,8 +57,6 @@ parser = BookmarksParser()
 argv_bookmarks = ""
 argv_command = ""
 
-len_argv = len(argv)
-
 if len(argv) > 1:
     for i in range(1, len(argv)):
         if argv[i].startswith("-"):
